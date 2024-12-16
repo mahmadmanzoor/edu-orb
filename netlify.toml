@@ -1,4 +1,10 @@
+[build]
+  base = "client"                   # Specifies the base directory for the build
+  command = "npm run build"         # The build command to execute
+  publish = "build"                 # The directory to publish
+
+# Redirect all routes to index.html (important for React Router)
 [[redirects]]
-from = "/*"
-to = "/index.html"
-status=200
+  from = "/*"
+  to = "/index.html"
+  status = 200
