@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  background-color: #eeeeee;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.MuiCard-root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
