@@ -1,29 +1,29 @@
-import { useState, useEffect } from 'react';
-import Container from '@mui/material/Container';
-import Stack from '@mui/material/Stack';
-import { Button, Typography } from '@mui/material';
-import { FormControl } from '@mui/material';
-import { InputLabel } from '@mui/material';
-import { Select } from '@mui/material';
-import { MenuItem } from '@mui/material';
-import { useParams } from 'react-router-dom';
-import Card from '@mui/material/Card';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
+import { useState, useEffect } from "react";
+import Container from "@mui/material/Container";
+import Stack from "@mui/material/Stack";
+import { Button, Typography } from "@mui/material";
+import { FormControl } from "@mui/material";
+import { InputLabel } from "@mui/material";
+import { Select } from "@mui/material";
+import { MenuItem } from "@mui/material";
+// import { useParams } from "react-router-dom";
+import Card from "@mui/material/Card";
+import Table from "@mui/material/Table";
+import TableBody from "@mui/material/TableBody";
+import TableCell from "@mui/material/TableCell";
+import TableHead from "@mui/material/TableHead";
+import TableRow from "@mui/material/TableRow";
 
 function App() {
-  const [course, setCourse] = useState('SE-321');
+  const [course, setCourse] = useState("SE-321");
   const [courses, setCourses] = useState([]);
 
-  const [plo, setPlo] = useState('PLO-1');
+  const [plo, setPlo] = useState("PLO-1");
   const [plos, setPlos] = useState([]);
 
   const [cloList, setCloList] = useState([]);
-  const [activities, setActivities] = useState([]);
-  const [students, setStudents] = useState([]);
+  // const [activities, setActivities] = useState([]);
+  // const [students, setStudents] = useState([]);
   const [scores, setScores] = useState([]);
 
   useEffect(() => {
@@ -65,11 +65,11 @@ function App() {
   useEffect(() => {
     async function getCloList() {
       const response = await fetch(
-        'http://localhost:4000/api/course-clo-list/',
+        "http://localhost:4000/api/course-clo-list/",
         {
-          method: 'POST',
+          method: "POST",
           headers: {
-            'Content-Type': 'application/json',
+            "Content-Type": "application/json",
           },
           body: JSON.stringify({
             course,
@@ -110,9 +110,9 @@ function App() {
       const response = await fetch(
         `http://localhost:4000/api/clo-activity-list`,
         {
-          method: 'POST',
+          method: "POST",
           headers: {
-            'Content-Type': 'application/json',
+            "Content-Type": "application/json",
           },
           body: JSON.stringify({
             course,
@@ -128,7 +128,7 @@ function App() {
       }
 
       const activities = await response.json();
-      setActivities(activities);
+      // setActivities(activities);
 
       let scores = [];
 
@@ -144,7 +144,7 @@ function App() {
         }
 
         const students = await response.json();
-        setStudents(students);
+        // setStudents(students);
 
         students.forEach((student) => {
           let marks = student.marksArr.find(
@@ -238,7 +238,7 @@ function App() {
         </Button>
 
         <Card elevation={2}>
-          <Table sx={{ border: '1px', backgroundColor: 'white' }}>
+          <Table sx={{ border: "1px", backgroundColor: "white" }}>
             <TableHead>
               <TableRow>
                 <TableCell>Name</TableCell>

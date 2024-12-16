@@ -34,7 +34,7 @@ function App() {
     getPlo();
 
     return;
-  }, []);
+  }, [id]);
 
   async function editPlo(event) {
     event.preventDefault();

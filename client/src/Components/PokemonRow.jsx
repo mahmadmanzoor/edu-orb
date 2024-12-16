@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 function PokemonRow(props) {
   console.log(props);
@@ -8,7 +8,11 @@ function PokemonRow(props) {
         <th>{props.bulbasaur.id}</th>
         <th>{props.bulbasaur.name}</th>
         <th>
-          <img src={props.bulbasaur.sprite} style={{ width: '50%' }}></img>
+          <img
+            src={props.bulbasaur.sprite}
+            alt={`${props.bulbasaur.name} sprite`}
+            style={{ width: "50%" }}
+          />
         </th>
       </tr>
     </table>
