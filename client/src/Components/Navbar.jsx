@@ -1,10 +1,10 @@
-import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import Stack from '@mui/material/Stack';
+import * as React from "react";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+import Stack from "@mui/material/Stack";
 
 // The navigation bar, allowing for quick navigation to various features of the website
 export default function Navbar() {
@@ -14,13 +14,13 @@ export default function Navbar() {
         position="static"
         elevation={0}
         sx={{
-          boxShadow: '#bdbdbd 0px -1px 1px inset',
+          boxShadow: "#bdbdbd 0px -1px 1px inset",
         }}
       >
         <Toolbar>
           <Button sx={{ p: 0 }} href="/">
             <Typography variant="logo" component="div" color="secondary">
-              OBE-WAN
+              EDU-ORB
             </Typography>
           </Button>
           <Stack spacing={2} direction="row" sx={{ flexGrow: 1 }}>
